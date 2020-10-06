@@ -1,0 +1,11 @@
+console.log("hola");
+let a = 10;
+let z = 10;
+let b = 16;
+let c = "daniel";
+let d = true;
+let e = { name: "daniel", lastname: "soto", work: ["Avantica", "belcorp"] };
+let f = ["apple", "pear", "banana", "watermelon"];
+let h = [{ name: "Daniel" }, { name: "Jose" }];
+console.log(a === z);
+console.log(h[1]);
