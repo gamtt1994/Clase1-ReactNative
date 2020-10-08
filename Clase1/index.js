@@ -9,3 +9,4 @@ let f = ["apple", "pear", "banana", "watermelon"];
 let h = [{ name: "Daniel" }, { name: "Jose" }];
 console.log(a === z);
 console.log(h[1]);
+console.log(h[1]);
