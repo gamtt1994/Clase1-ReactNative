@@ -23,15 +23,12 @@ let busqueda0 = celular.filter(function (cell) {
 console.log(busqueda0);
 */
 
-function busqueda(items, valorAbuscar) {
-  return items.filter((variable) =>
-    Object.values(variable).includes(valorAbuscar)
-  );
-}
 let data = [
   { name: "Gustavo", telefono: 947230081 },
   { name: "Alenadro", telefono: 947230082 },
   { name: "Miguel", telefono: 947230083 },
 ];
 
-console.log("Filtro:", busqueda(data, "Miguel"));
+let texto = 947230081;
+let x = data.filter((variable) => Object.values(variable).includes(texto));
+console.log(x[0].name);
