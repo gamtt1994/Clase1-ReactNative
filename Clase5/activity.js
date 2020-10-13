@@ -8,29 +8,31 @@ T-shirt|15|4
 cuantas camisas puedo comprar?
 cuantos Jean puedo comprar? */
 
-let clothing = [
-  { id: 1, ropa: "jeans", precio: 30, stock: 5 },
-  { id: 2, ropa: "shoes", precio: 70, stock: 7 },
-  { id: 3, ropa: "T-shirt", precio: 15, stock: 4 },
+//Realización del arreglo de ropa
+let clothings = [
+  { id: 1, clothing: "jeans", price: 30, stock: 5 },
+  { id: 2, clothing: "shoes", price: 70, stock: 7 },
+  { id: 3, clothing: "T-shirt", price: 15, stock: 4 },
 ];
 
 let capital = 250;
-let maxValue = clothing[0].stock;
+let maxValue = clothings[0].stock;
 
 //Obtener el mayor valor de stock
-for (var i = 0; i < clothing.length; i++) {
-  var currentValue = clothing[i].stock;
+for (var i = 0; i < clothings.length; i++) {
+  var currentValue = clothings[i].stock;
 
   if (currentValue > maxValue) {
     maxValue = currentValue;
   }
 }
 
+//Hacemos la sumatoria de la muda y comparamos con el capital
 let acumulador2 = 0;
 let muda = 0;
 for (var j = 1; j < maxValue; j++) {
   acumulador2 =
-    (clothing[0].precio + clothing[1].precio + clothing[2].precio) * j;
+    (clothings[0].price + clothings[1].price + clothings[2].price) * j;
   if (capital > acumulador2) {
     muda = j;
   } else {
@@ -39,32 +41,32 @@ for (var j = 1; j < maxValue; j++) {
 console.log("La cantidad de muda es:", muda);
 console.log("-----Resolución con Switch---------");
 
-for (let i = 0; i < clothing.length; i++) {
-  let stock = clothing[i].stock;
-  let price = clothing[i].precio;
+for (let i = 0; i < clothings.length; i++) {
+  let stock = clothings[i].stock;
+  let priceClothing = clothings[i].price;
   let cantidad = 0;
 
   for (let j = 1; j <= stock; j++) {
-    if (capital > j * price) {
+    if (capital > j * priceClothing) {
       cantidad = j;
     } else {
       cantidad;
     }
   }
 
-  console.log(`La cantidad máxima de ${clothing[i].ropa} es: `, cantidad);
+  console.log(`La cantidad máxima de ${clothings[i].clothing} es: `, cantidad);
 }
 
 //Resolución con switch
 console.log("-----Resolución con Switch---------");
-for (let i = 0; i < clothing.length; i++) {
-  switch (clothing[i]) {
-    case clothing[0]:
-      let stock = clothing[0].stock;
-      let price = clothing[0].precio;
+for (let i = 0; i < clothings.length; i++) {
+  switch (clothings[i]) {
+    case clothings[0]:
+      let stock = clothings[0].stock;
+      let priceClothing = clothings[0].price;
       let cantidad = 0;
       for (let j = 1; j <= stock; j++) {
-        if (capital > j * price) {
+        if (capital > j * priceClothing) {
           cantidad = j;
         } else {
           cantidad;
@@ -72,12 +74,12 @@ for (let i = 0; i < clothing.length; i++) {
       }
       console.log("La cantidad máxima de jeans es: ", cantidad);
       break;
-    case clothing[1]:
-      let stock1 = clothing[1].stock;
-      let price1 = clothing[1].precio;
+    case clothings[1]:
+      let stockClothing1 = clothings[1].stock;
+      let priceClothing1 = clothings[1].price;
       let cantidad1 = 0;
-      for (let j = 1; j <= stock1; j++) {
-        if (capital > j * price1) {
+      for (let j = 1; j <= stockClothing1; j++) {
+        if (capital > j * priceClothing1) {
           cantidad1 = j;
         } else {
           cantidad1;
@@ -85,12 +87,12 @@ for (let i = 0; i < clothing.length; i++) {
       }
       console.log("La cantidad máxima de shoes es: ", cantidad1);
       break;
-    case clothing[2]:
-      let stock2 = clothing[2].stock;
-      let price2 = clothing[2].precio;
+    case clothings[2]:
+      let stockClothing2 = clothings[2].stock;
+      let priceClothing2 = clothings[2].price;
       let cantidad2 = 0;
-      for (let j = 1; j <= stock2; j++) {
-        if (capital > j * price2) {
+      for (let j = 1; j <= stockClothing2; j++) {
+        if (capital > j * priceClothing2) {
           cantidad2 = j;
         } else {
           cantidad2;
