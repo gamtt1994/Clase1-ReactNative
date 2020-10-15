@@ -24,3 +24,14 @@ square(2);
 
 const squareSimply = (x) => console.log("squareSimply", x * x);
 squareSimply(4);
+
+let priceProduct = [10, 12, 13, 15];
+
+const bill = (products, tax) => {
+  let total = 0;
+  for (let i = 0; i < products.length; i++) {
+    total += products[i] + products[i] * tax;
+  }
+  console.log(`El total es: `, total);
+};
+console.log("bill", bill(priceProduct, 0.18));

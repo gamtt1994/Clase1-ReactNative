@@ -21,4 +21,3 @@ const addData = (valueData) => {
 };
 
 addData("Miguel");
-addData("Juan");
