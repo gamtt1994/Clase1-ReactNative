@@ -22,6 +22,8 @@ const addData = (valueData) => {
 
 addData("Miguel");
 
+let priceProduct = [10, 12, 13, 15];
+
 const bill = (products, tax) => {
   let total = 0;
   for (let i = 0; i < products.length; i++) {
