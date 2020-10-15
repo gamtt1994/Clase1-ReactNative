@@ -31,4 +31,10 @@ const bill = (products, tax) => {
   }
   console.log(`El total es: `, total);
 };
-console.log("bill", bill(priceProduct, 0.18));
+bill(priceProduct, 0.18);
+
+function showMessage(name, surname) {
+  console.log(`hello ${arguments[0]} ${arguments[1]}`);
+}
+
+showMessage("Daniel", "Soto");
