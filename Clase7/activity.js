@@ -5,7 +5,7 @@
 */
 
 const divide = (x, y) => {
-  console.log("dividir", x / y);
+  console.log("La división es: ", x / y);
 };
 divide(6, 2);
 
@@ -21,3 +21,4 @@ const addData = (valueData) => {
 };
 
 addData("Miguel");
+addData("Juan");
