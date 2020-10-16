@@ -43,4 +43,7 @@ const createHero = fight.createCharacter("hero", "Gustavo");
 const createVillain = fight.createCharacter("villain", "Alejandro");
 
 console.log("Moving Hero:", createHero.attack());
+console.log("Moving Hero:", createHero.guard());
+
 console.log("Moving Villain", createVillain.attack());
+console.log("Moving Villain", createVillain.guard());
