@@ -35,3 +35,37 @@ const bill = (products, tax) => {
   console.log(`El total es: `, total);
 };
 bill(priceProduct, 0.18);
+
+function showMessage(name, surname) {
+  console.log(`hello ${arguments[0]} ${arguments[1]}`);
+}
+
+showMessage("Daniel", "Soto");
+
+function showMessages() {
+  for (let i = 0; i < arguments.length; i++) {
+    console.log("arguments", arguments[i]);
+  }
+}
+
+showMessages("Daniel", "Gustavo");
+//Funcion anidada
+function multiple(x) {
+  function fn(y) {
+    return x * y;
+  }
+  return fn;
+}
+
+let triple = multiple(3);
+
+console.log(`triple`, triple(3));
+
+function messages(name) {
+  function hello() {
+    console.log(`Hello, ${name}`);
+  }
+  return hello();
+}
+
+messages("Daniel");
