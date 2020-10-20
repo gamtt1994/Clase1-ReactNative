@@ -7,7 +7,6 @@ class BallFactory {
       ball.roll = function () {
         return `The ${this._type} is rolling`;
       };
-
       return ball;
     };
   }
