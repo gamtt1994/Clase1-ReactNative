@@ -78,7 +78,8 @@ calculatePrices(function () {
   let factura2 = 0;
   for (let i = 0; i < bill.length; i++) {
     for (let j = 0; j < bill[i].products.length; j++) {
-      acumulate = acumulate + bill[i].products[j].price;
+      acumulate =
+        acumulate + bill[i].products[j].price * bill[i].products[j].qty;
     }
   }
   console.log("La suma total de las facutras es: ", acumulate);
