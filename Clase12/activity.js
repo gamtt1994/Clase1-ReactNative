@@ -63,7 +63,7 @@ const bill = [
       { id: 41231283, product: "Refresco", price: 35, qty: 1 },
       { id: 12315123, product: "Agua gasificada", price: 25, qty: 1 },
     ],
-    totalPrice: 140,
+    totalPrice: 100,
     currency: "USD",
   },
 ];
@@ -74,8 +74,12 @@ function calculatePrices(calculatePrice) {
 
 calculatePrices(function () {
   let acumulate = 0;
+  let factura1 = 0;
+  let factura2 = 0;
   for (let i = 0; i < bill.length; i++) {
-    acumulate = acumulate + bill[i].totalPrice;
+    for (let j = 0; j < bill[i].products.length; j++) {
+      acumulate = acumulate + bill[i].products[j].price;
+    }
   }
   console.log("La suma total de las facutras es: ", acumulate);
 });
